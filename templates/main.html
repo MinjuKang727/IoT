@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    내일은 정처기 필기 시험 D-1!!!!!!!!!!!!!!!!!!!!!!
+    <form action="http://192.168.31.161:5028/cal" method="get">
+        <!-- get 방식으로 보내면 
+            url 뒤에 /?키1=값&키2=값2 형식으로 보내짐
+            (?로 시작하는 형식 :Query String)
+        보안에 매우 취약함 -->
+        <input type="number" name="get_num1">
+        <select name="get_operater">
+            <option value = '+'>+</option>
+            <option value = '-'>-</option>
+            <option value = '*'>x</option>
+            <option value = '/'>/</option>
+        </select>
+        <input type="number" name="get_num2">
+        <!-- form 태그 밑에 submit 타입 input태그가 있어야 함 -->
+        <input type="submit" value="GET_계산">
+    </form>
+    <form action="http://192.168.31.161:5028/cal" method="post">
+        
+        <input type="number" name="post_num1">
+        <select name="post_operater">
+            <option value = '+'>+</option>
+            <option value = '-'>-</option>
+            <option value = '*'>x</option>
+            <option value = '/'>/</option>
+        </select>
+        <input type="number" name="post_num2">
+        
+        <input type="submit" value="POST_계산">
+    </form>
+</body>
+</html>
